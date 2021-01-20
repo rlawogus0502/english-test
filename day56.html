@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+    <p id="name"> </p>
+    <script>
+        var i=0;
+        var engwords=[
+            "therefore", "conclude", "statistics","physics", "geology",
+            "decimal" , "diameter", "literal", "leterate", "fluent", 
+            "educate", "instruct", "lecture", "due", "term",
+            "examine", "notice", "award", "scold", "multiply",
+            "calculate", "memorize", "erase", "institute", "laboratory",
+            "dormitory", "principal", "aisle", "scholarship","grant",
+            "semester", "motivate", "attitude", "eager", "entrance",
+            "portfolio", "submit", "slang", "peer", "poke",
+            "perform", "manage", "operate", "expert", "senior",
+            "staff", "barber", "editor", "reward", "wage",
+            "shift", "vend", "illustrate", "retire", "supervise",
+            "accomplish", "architect", "secretary", "peasant", "blacksmith",
+            "grocer", "superior", "career", "profession", "application",
+            "salary", "labor", "proficient", "prompt", "craft", 
+            "pile", "level","sheet", "attach", "photocopy",
+            "aside", "agency", "basis", "index", "deny",
+            "stationery", "detail", "classify", "document", "string",
+            "stack", "staple", "misplace", "procedure", "firm", 
+            "client","frequent", "commmute", "division", "notify",
+            "assign", "booth", "catolog", "brochure", "distribute"
+        ];
+        var korwords1=[
+            "그러므로", "끝내다", "통계학", "물리학", "지질학",
+            "십진법의", "지름", "글자 그대로의", "읽고 쓸 줄 아는",
+            "유창한", "교육하다", "교육하다", "강의", "기일이 다 된",
+            "기간", "검사", "통지", "상", "꾸짖다",
+            "증식하다","계산하다", "기억하다", "지우다", "협회", "연구소",
+            "기숙사", "주된", "통로", "장학금", "장학금", "학기",
+            "동기를 부여하다", "태도", "열성적인", "입장",
+            "작품 모음", "따르다","속어", "동등한 사람", "찌르다",
+            "실행하다", "경영하다", "움직이다", "전문가", "손위의",
+            "직원", "이발사","편집자", "교정자", "보상", "임금",
+            "교체", "행상하다", "삽화를 그리다", "퇴직하다","감독하다",
+            "달성하다", "건축가", "비서", "농부", "대장장이",
+            "식료품 장수", "상사", "직업", "직업", "응모",
+            "봉급", "노동", "익숙한", "신속한", "기능",
+            "더미", "수준", "장", "붙이다", "사진 복사물",
+            "옆에", "대리점", "기초", "색인", "부인하다",
+            "문방구", "세부사항", "분류하다", "문서", "줄",
+            "더미", "스테이플러 알", "잘못 두다", "절차", "회사",
+            "의뢰인", "자주 일어나는", "통근하다", "분열", "통지하다",
+            "할당하다", "부스", "목록", "안내 소책자", "분배하다"
+        ];
+        var korwords2=[
+            "따라서", "결론내리다", "통계 자료", "물리", "지질",
+            "소수의", "지름", "정확한", "교양 있는", "유창한",
+            "교육하다", "지시하다", "꾸지람", "기일이 다 된", "학기",
+            "조사하다", "주목하다", "상을 주다", "혼내다", "증식시키다",
+            "계산", "암기하다", "지우다", "연구소", "실험실", 
+            "기숙사", "교장", "통로", "장학금", "주다",
+            "학기", "동기를 부여하다", "마음가짐", "간절히 하고자 하는", "입학",
+            "포트폴리오", "굴복하다", "은어", "또래", "찌르다", 
+            "수행하다", "운영하다", "작동하다", "숙련가" ,"선임의",
+            "직원", "이발사", "교정자", "보수", "노임",
+            "교대", "팔다", "설명하다", "은퇴하다", "관리하다",
+            "이루다", "설계사", "장관", "소농", "대장장이",
+            "식료품 장수", "윗사람", "이력", "전문직", "원서",
+            "급여", "일", "능숙한", "시간을 엄수하는", "기교",
+            "쌓아 올리다", "높이", "시트", "첨부하다", "사진 복사하다",
+            "곁에", "대리점", "제", "지수", "거절하다",
+            "문방구", "세부사항", "분류하다", "서류", "끈",
+            "쌓다", "스테이플러로 고정시키다", "둔 곳을 잊다", "순서", "굳은",
+            "고객", "빈번한", "통학하다", "분열", "통보하다",
+            "임명하다", "부스", "목록", "안내 소책자", "분배하다",
+
+        ];
+        var korwords3=[
+            "", "", "", "", "",
+            "", "", "", "", "",
+            "", "", "", "", "",
+            "", "", "", "", "",
+            "", "", "", "", "",
+            "", "", "", "", "",
+            "", "", "", "", "",
+            "", "", "", "", "",
+            "", "", "", "", "",
+            "", "", "", "", "",
+            "", "", "", "", "",
+            "", "", "", "", ""
+        ];
+        var korwords4=[
+        "", "", "", "", "",
+            "", "", "", "", "",
+            "", "", "", "", "",
+            "", "", "", "", "",
+            "", "", "", "", "",
+            "", "", "", "", "",
+            "", "", "", "", "",
+            "", "", "", "", "",
+            "", "", "", "", "",
+            "", "", "", "", "",
+            "", "", "", "", "",
+            "", "", "", "", ""
+        ];
+        var score=[];
+        var ans=[];
+        var ques=0;
+        var eng=30;
+        var sq=0;
+        function start(){
+            ques=0;
+            sq=0;
+            ans=[]; 
+            score=[];
+            i=i+1;
+            document.getElementById("name").innerHTML="test number "+i;
+            var n, j, k, ka, kb, kc, kd;
+            for (n = engwords.length -1; n > 0; n--) {
+                j = Math.floor(Math.random() * n)
+                k = engwords[n]
+                ka = korwords1[n]
+                kb = korwords2[n]
+                kc = korwords3[n]
+                kd = korwords4[n]
+                engwords[n] = engwords[j]
+                korwords1[n] = korwords1[j]
+                korwords2[n] = korwords2[j]
+                korwords3[n] = korwords3[j]
+                korwords4[n] = korwords4[j]
+                engwords[j] = k
+                korwords1[j] = ka
+                korwords2[j] = kb
+                korwords3[j] = kc
+                korwords4[j] = kd
+            }
+            
+            document.getElementById("prob").innerHTML=engwords[ques];
+            
+            
+        }
+        function input(){
+            var word=document.getElementById("input").value;
+            if(word=="0502"){
+                showans();
+            }
+            if(word=="2050"){
+                hideans();
+            }
+            ans.push(word);
+            ques++;
+            if(ques<eng){
+                document.getElementById("prob").innerHTML=engwords[ques];
+            }
+            else{
+                document.getElementById("prob").innerHTML=
+                [korwords1[ques],korwords2[ques],korwords3[ques],korwords4[ques]];
+            }
+        }
+        function output(){
+            var num=0;
+            for(var i=0; i<eng; i++){
+                    if(ans[i]==korwords1[i]){
+                        num++; score.push("o");
+                    }
+                    else if(ans[i]==korwords2[i]){
+                        num++; score.push("o");
+                    }
+                    else if(ans[i]==korwords3[i]){
+                        num++; score.push("o");
+                    }
+                    else if(ans[i]==korwords4[i]){
+                        num++; score.push("o");
+                    }
+                    else{
+                        score.push("x");
+                    }
+            }
+            for(var i=eng; i<engwords.length; i++){
+                    if(ans[i]==engwords[i]){
+                        num++; score.push("o");
+                    }
+                    else{
+                        score.push("x");
+                    }
+            }
+            document.getElementById("output").value = num+"점";
+        }
+        function showans(){
+            document.getElementById('showans').style.display='block';
+            return;
+        }
+        function hideans(){
+            document.getElementById('showans').style.display='none';
+            return;
+        }
+        
+        function scoreback(){
+            sq=sq-1;
+            if(sq<eng){
+                document.getElementById("scoreprob").innerHTML
+                =engwords[sq];
+                document.getElementById("scoreyourans").innerHTML=ans[sq];
+                document.getElementById("scorerealans").innerHTML
+                =[korwords1[sq],korwords2[sq],korwords3[sq],korwords4[sq]];
+                document.getElementById("scoreresult").innerHTML=sq;
+            }
+            else{
+                document.getElementById("scoreprob").innerHTML
+                =[korwords1[sq], korwords2[sq], korwords3[sq],korwords4[sq]];
+                document.getElementById("scoreyourans").innerHTML=ans[sq];
+                document.getElementById("scorerealans").innerHTML
+                =engwords[sq];
+                document.getElementById("scoreresult").innerHTML=sq;
+            }
+        }
+        function scorenext(){
+            sq=sq+1;
+
+            if(sq<eng){
+                document.getElementById("scoreprob").innerHTML
+                =engwords[sq];
+                document.getElementById("scoreyourans").innerHTML=ans[sq];
+                document.getElementById("scorerealans").innerHTML
+                =[korwords1[sq],korwords2[sq],korwords3[sq],korwords4[sq]];
+                document.getElementById("scoreresult").innerHTML=sq;
+            }
+            else{
+                document.getElementById("scoreprob").innerHTML
+                =[korwords1[sq], korwords2[sq], korwords3[sq],korwords4[sq]];
+                document.getElementById("scoreyourans").innerHTML=ans[sq];
+                document.getElementById("scorerealans").innerHTML
+                =engwords[sq];
+                document.getElementById("scoreresult").innerHTML=sq;
+            }
+            
+        }
+        //document.getElementById("score").innerHTML=ans[0];
+    </script>    
+    <body>
+        <table>
+            <tr>
+                <th id="prob"></th>
+            </tr>
+        </table>
+        
+        <button type="button" onclick="start()">start</button>
+        <br>
+        <input type="text" id="input">
+        <button onclick="input()">next</button>
+        <br>
+        <textarea id="output"></textarea>
+        <br>
+        <button onclick="output()">score</button>
+        <br>
+        <table id="showans" style="display:none">
+            <tr>
+                <th>problem  </th>
+                <th>youranswer  </th>
+                <th>realanswer  </th>
+                <th>result  </th>
+            </tr>
+            <tr>
+                <td id="scoreprob"></td>
+                <td id="scoreyourans"></td>
+                <td id="scorerealans"></td>
+                <td id="scoreresult"></td>
+            </tr>
+        </table>
+        <button type="button" onclick="scoreback()">scoreback</button>
+        <button type="button" onclick="scorenext()">scorenext</button>
+    </body>
+</html>
