@@ -4,99 +4,128 @@
     <script>
         var i=0;
         var engwords=[
-            "therefore", "conclude", "statistics","physics", "geology",
-            "decimal" , "diameter", "literal", "leterate", "fluent", 
-            "educate", "instruct", "lecture", "due", "term",
-            "examine", "notice", "award", "scold", "multiply",
-            "calculate", "memorize", "erase", "institute", "laboratory",
-            "dormitory", "principal", "aisle", "scholarship","grant",
-            "semester", "motivate", "attitude", "eager", "entrance",
-            "portfolio", "submit", "slang", "peer", "poke",
-            "perform", "manage", "operate", "expert", "senior",
-            "staff", "barber", "editor", "reward", "wage",
-            "shift", "vend", "illustrate", "retire", "supervise",
-            "accomplish", "architect", "secretary", "peasant", "blacksmith",
-            "grocer", "superior", "career", "profession", "application",
-            "salary", "labor", "proficient", "prompt", "craft", 
-            "pile", "level","sheet", "attach", "photocopy",
-            "aside", "agency", "basis", "index", "deny",
-            "stationery", "detail", "classify", "document", "string",
-            "stack", "staple", "misplace", "procedure", "firm", 
-            "client","frequent", "commmute", "division", "notify",
-            "assign", "booth", "catolog", "brochure", "distribute"
+        "outfit",
+"detergent",
+"drawer",
+"cleanse",
+"costume",
+"polish",
+"rubbish",
+"loose",
+"purse",
+"rely",
+"fashion",
+"fold",
+"leak",
+"premium",
+"mop",
+"sew",
+"nap",
+"stuff",
+"discard",
+"spread",
+"fancy",
+"laundry",
+"chore",
+"usual",
+"buckle",
+"stripe",
+"nourish",
+"stair",
+"casual",
+"routine",
+"dispose",
+"vest",
+"wipe",
+"sink",
+"comfort",
+"formal",
+"plain",
+"alarm",
+"fur",
+"length",
+"suit",
+"dust",
+"appliance",
+"tap",
+"crack",
+"fabric",
+"trim",
+"spacious",
+"edge",
+"cotton",
+"thread",
+"collar",
+"uniform",
+"mess",
+"fade",
+"flush",
+"wallet",
+"trousers",
+"alter",
+"outlet"
         ];
-        var korwords1=[
-            "그러므로", "끝내다", "통계학", "물리학", "지질학",
-            "십진법의", "지름", "글자 그대로의", "읽고 쓸 줄 아는",
-            "유창한", "교육하다", "교육하다", "강의", "기일이 다 된",
-            "기간", "검사", "통지", "상", "꾸짖다",
-            "증식하다","계산하다", "기억하다", "지우다", "협회", "연구소",
-            "기숙사", "주된", "통로", "장학금", "장학금", "학기",
-            "동기를 부여하다", "태도", "열성적인", "입장",
-            "작품 모음", "따르다","속어", "동등한 사람", "찌르다",
-            "실행하다", "경영하다", "움직이다", "전문가", "손위의",
-            "직원", "이발사","편집자", "교정자", "보상", "임금",
-            "교체", "행상하다", "삽화를 그리다", "퇴직하다","감독하다",
-            "달성하다", "건축가", "비서", "농부", "대장장이",
-            "식료품 장수", "상사", "직업", "직업", "응모",
-            "봉급", "노동", "익숙한", "신속한", "기능",
-            "더미", "수준", "장", "붙이다", "사진 복사물",
-            "옆에", "대리점", "기초", "색인", "부인하다",
-            "문방구", "세부사항", "분류하다", "문서", "줄",
-            "더미", "스테이플러 알", "잘못 두다", "절차", "회사",
-            "의뢰인", "자주 일어나는", "통근하다", "분열", "통지하다",
-            "할당하다", "부스", "목록", "안내 소책자", "분배하다"
-        ];
-        var korwords2=[
-            "따라서", "결론내리다", "통계 자료", "물리", "지질",
-            "소수의", "지름", "정확한", "교양 있는", "유창한",
-            "교육하다", "지시하다", "꾸지람", "기일이 다 된", "학기",
-            "조사하다", "주목하다", "상을 주다", "혼내다", "증식시키다",
-            "계산", "암기하다", "지우다", "연구소", "실험실", 
-            "기숙사", "교장", "통로", "장학금", "주다",
-            "학기", "동기를 부여하다", "마음가짐", "간절히 하고자 하는", "입학",
-            "포트폴리오", "굴복하다", "은어", "또래", "찌르다", 
-            "수행하다", "운영하다", "작동하다", "숙련가" ,"선임의",
-            "직원", "이발사", "교정자", "보수", "노임",
-            "교대", "팔다", "설명하다", "은퇴하다", "관리하다",
-            "이루다", "설계사", "장관", "소농", "대장장이",
-            "식료품 장수", "윗사람", "이력", "전문직", "원서",
-            "급여", "일", "능숙한", "시간을 엄수하는", "기교",
-            "쌓아 올리다", "높이", "시트", "첨부하다", "사진 복사하다",
-            "곁에", "대리점", "제", "지수", "거절하다",
-            "문방구", "세부사항", "분류하다", "서류", "끈",
-            "쌓다", "스테이플러로 고정시키다", "둔 곳을 잊다", "순서", "굳은",
-            "고객", "빈번한", "통학하다", "분열", "통보하다",
-            "임명하다", "부스", "목록", "안내 소책자", "분배하다",
-
-        ];
-        var korwords3=[
-            "", "", "", "", "",
-            "", "", "", "", "",
-            "", "", "", "", "",
-            "", "", "", "", "",
-            "", "", "", "", "",
-            "", "", "", "", "",
-            "", "", "", "", "",
-            "", "", "", "", "",
-            "", "", "", "", "",
-            "", "", "", "", "",
-            "", "", "", "", "",
-            "", "", "", "", ""
-        ];
-        var korwords4=[
-        "", "", "", "", "",
-            "", "", "", "", "",
-            "", "", "", "", "",
-            "", "", "", "", "",
-            "", "", "", "", "",
-            "", "", "", "", "",
-            "", "", "", "", "",
-            "", "", "", "", "",
-            "", "", "", "", "",
-            "", "", "", "", "",
-            "", "", "", "", "",
-            "", "", "", "", ""
+        var korwords=[
+        "(특별한 날 입는) 옷, 의상 한 벌, 옷",
+"세탁 세제, 세정제",
+"서랍, (항상 복수형) 장롱, 장롱",
+"세척하다, 씻다, 정화하다",
+"의상, 복장, 분장",
+"닦다, 광[윤]을 내다, (문장 등을) 다듬다,광을 내다, 다듬다",
+"쓰레기, 폐물",
+"헐거운, 느슨한,  풀린, 벗겨진",
+"(美) (어깨끈이 없는) 핸드백, (英) (여성용 작은)                                                  지갑,  핸드백,                                                   지갑",
+"믿다, 의지하다",
+"유행, 인기, 패션",
+"접다",
+"새어나옴, 누출, 새다, 누출하다",
+"고가의, 고급의, 할증금, 포상금",
+"대걸레, (대걸레로) 닦다, 닦다",
+"바느질하다",
+"낮잠, 선잠, 선잠을 자다, 졸다",
+"물건, 사물, 재료, 자료",
+"(불필요한 것을) 버리다, 처분하다, 버리다",
+"펴다, 펼치다, 퍼지다",
+"화려한, 장식적인, 값비싼",
+"세탁물, 세탁소",
+"(집안의) 자질구레한 일, 허드렛일, 자질구레한 일",
+"평소의, 일상의",
+"버클, 버클로 죄다, 버클을 채우다",
+"줄무늬",
+"영양분을 공급하다, (사람·생물을) 기르다, 기르다",
+"(보통 복수형) 계단, 계단",
+"격식을 차리지 않은, 평상복의, 우연의",
+"판에 박힌 일, 일과, 일상적인, 판에 박힌",
+"처리하다, 처분하다",
+"조끼",
+"닦다, 훔치다, 가볍게 문지르다",
+"(부엌의) 싱크대, 세면대, 싱크대",
+"편안함, 위로, 편하게 하다",
+"공식적인, 격식을 차린",
+"(의복 등이) 수수한, 무늬가 없는, 명백한, 분명한, 수수한",
+"경보기, 자명종, 놀람, 공포, 놀라게 하다",
+"모피",
+"길이, 기간",
+"정장, 어울리다, 잘 맞다",
+"먼지를 털다, 먼지, 흙",
+"(가정용·사무실용의) 기구, 장치, 전기 제품, 기구",
+"(수도 등의) 꼭지, (통의) 주둥이, 마개, 꼭지, 주둥이",
+"깨지다, 금이 가다, 갈라진 금, 틈",
+"천, 직물, 직물의 짜임새",
+"다듬다, 손질하다, 정돈(된 상태), 잘 정돈된,정돈",
+"넓은, 광대한",
+"가장자리, 모서리",
+"솜, 면화, 면직물, 무명실",
+"실, 실을 꿰다",
+"깃, 칼라",
+"유니폼, 제복, 일정한, 균등한",
+"어질러진 것, 쓰레기 더미, 어수선함, 혼잡",
+"(색이) 바래다, (색을) 바래게 하다, 바래다, 바래게 하다",
+"(물·액체 등으로) 씻어 내리다 , (얼굴을) 붉히다,                                                  상기시키다, 씻어 내리다, 붉히다",
+"(접는 식의 지폐를 넣는) 지갑, 지갑",
+"바지",
+"변경하다, 바꾸다",
+"코드 구멍, 콘센트, 할인점"
         ];
         var score=[];
         var ans=[];
@@ -110,27 +139,18 @@
             score=[];
             i=i+1;
             document.getElementById("name").innerHTML="test number "+i;
-            var n, j, k, ka, kb, kc, kd;
+            var n, j, k, ka;
             for (n = engwords.length -1; n > 0; n--) {
                 j = Math.floor(Math.random() * n)
                 k = engwords[n]
-                ka = korwords1[n]
-                kb = korwords2[n]
-                kc = korwords3[n]
-                kd = korwords4[n]
+                ka = korwords[n]
                 engwords[n] = engwords[j]
-                korwords1[n] = korwords1[j]
-                korwords2[n] = korwords2[j]
-                korwords3[n] = korwords3[j]
-                korwords4[n] = korwords4[j]
+                korwords[n] = korwords[j]
                 engwords[j] = k
-                korwords1[j] = ka
-                korwords2[j] = kb
-                korwords3[j] = kc
-                korwords4[j] = kd
+                korwords[j] = ka
             }
             
-            document.getElementById("prob").innerHTML=engwords[ques];
+            document.getElementById("prob").innerHTML=(i)+". "+engwords[ques];
             
             
         }
@@ -145,26 +165,29 @@
             ans.push(word);
             ques++;
             if(ques<eng){
-                document.getElementById("prob").innerHTML=engwords[ques];
+                document.getElementById("prob").innerHTML=
+                (ques+1)+ ". "+engwords[ques];
+            }
+            else if(ques<engwords.length){
+                document.getElementById("prob").innerHTML=
+                (ques+1)+". "+korwords[ques];
             }
             else{
                 document.getElementById("prob").innerHTML=
-                [korwords1[ques],korwords2[ques],korwords3[ques],korwords4[ques]];
+                "test is finished. click score button";
             }
         }
         function output(){
             var num=0;
+            var realan=[];
             for(var i=0; i<eng; i++){
-                    if(ans[i]==korwords1[i]){
-                        num++; score.push("o");
+                    realan=korwords[i].split(",");
+                    var flag=0
+                    for(var j=0; j<realan.length; j++){
+                        realan[j]=realan[j].trim();
+                        if(ans[i]==realan[j]) flag=1;
                     }
-                    else if(ans[i]==korwords2[i]){
-                        num++; score.push("o");
-                    }
-                    else if(ans[i]==korwords3[i]){
-                        num++; score.push("o");
-                    }
-                    else if(ans[i]==korwords4[i]){
+                    if(flag==1){
                         num++; score.push("o");
                     }
                     else{
@@ -172,63 +195,62 @@
                     }
             }
             for(var i=eng; i<engwords.length; i++){
-                    if(ans[i]==engwords[i]){
+                    var realan=korwords[i].split(",");
+                    var flag=0
+                    for(var j=0; j<realan.length; j++){
+                        if(ans[i]==realan[j]) flag=1;
+                    }
+                    if(flag==1){
                         num++; score.push("o");
                     }
                     else{
                         score.push("x");
                     }
             }
-            document.getElementById("output").value = num+"점";
+            var s="";
+            if (num>=engwords.length*9/10){
+                s="     congratulations!";
+            }
+            else{
+                s="     retry?"
+            }
+            document.getElementById("output").value = num+"점"+s;
         }
         function showans(){
             document.getElementById('showans').style.display='block';
-            return;
+            scoreshow();
         }
         function hideans(){
             document.getElementById('showans').style.display='none';
-            return;
         }
         
         function scoreback(){
             sq=sq-1;
-            if(sq<eng){
-                document.getElementById("scoreprob").innerHTML
-                =engwords[sq];
-                document.getElementById("scoreyourans").innerHTML=ans[sq];
-                document.getElementById("scorerealans").innerHTML
-                =[korwords1[sq],korwords2[sq],korwords3[sq],korwords4[sq]];
-                document.getElementById("scoreresult").innerHTML=sq;
-            }
-            else{
-                document.getElementById("scoreprob").innerHTML
-                =[korwords1[sq], korwords2[sq], korwords3[sq],korwords4[sq]];
-                document.getElementById("scoreyourans").innerHTML=ans[sq];
-                document.getElementById("scorerealans").innerHTML
-                =engwords[sq];
-                document.getElementById("scoreresult").innerHTML=sq;
-            }
+            scoreshow();
         }
         function scorenext(){
             sq=sq+1;
-
+            scoreshow();
+        }
+        function scoreshow(){
             if(sq<eng){
+                document.getElementById("scorenum").innerHTML= sq+1
                 document.getElementById("scoreprob").innerHTML
                 =engwords[sq];
                 document.getElementById("scoreyourans").innerHTML=ans[sq];
                 document.getElementById("scorerealans").innerHTML
-                =[korwords1[sq],korwords2[sq],korwords3[sq],korwords4[sq]];
-                document.getElementById("scoreresult").innerHTML=sq;
+                =korwords[sq];
+                document.getElementById("scoreresult").innerHTML=score[sq];
             }
             else{
+                document.getElementById("scorenum").innerHTML= sq+1
                 document.getElementById("scoreprob").innerHTML
-                =[korwords1[sq], korwords2[sq], korwords3[sq],korwords4[sq]];
+                =korwords[sq];
                 document.getElementById("scoreyourans").innerHTML=ans[sq];
                 document.getElementById("scorerealans").innerHTML
                 =engwords[sq];
-                document.getElementById("scoreresult").innerHTML=sq;
+                document.getElementById("scoreresult").innerHTML=score[sq];
             }
-            
         }
         //document.getElementById("score").innerHTML=ans[0];
     </script>    
@@ -239,7 +261,7 @@
             </tr>
         </table>
         
-        <button type="button" onclick="start()">start</button>
+        <button type="button" onclick="start()">start(retry)</button>
         <br>
         <input type="text" id="input">
         <button onclick="input()">next</button>
@@ -250,19 +272,27 @@
         <br>
         <table id="showans" style="display:none">
             <tr>
-                <th>problem  </th>
-                <th>youranswer  </th>
-                <th>realanswer  </th>
-                <th>result  </th>
+                <th>number:</th>
+                <td id="scorenum"></td>
             </tr>
             <tr>
+                <th>problem:</th>
                 <td id="scoreprob"></td>
+            </tr>
+            <tr>
+                <th>your answer:  </th>
                 <td id="scoreyourans"></td>
+            </tr>
+            <tr>
+                <th>real answer:  </th>
                 <td id="scorerealans"></td>
+            </tr>
+            <tr>
+                <th>result:  </th>
                 <td id="scoreresult"></td>
             </tr>
         </table>
-        <button type="button" onclick="scoreback()">scoreback</button>
-        <button type="button" onclick="scorenext()">scorenext</button>
+        <button type="button" onclick="scoreback()">teacher's_button_back</button>
+        <button type="button" onclick="scorenext()">teacher's_button_next</button>
     </body>
 </html>
