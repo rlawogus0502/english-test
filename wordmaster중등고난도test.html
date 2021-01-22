@@ -167,18 +167,15 @@
                     }
             }
             for(var i=eng; i<engwords.length; i++){
-                    var realan=korwords[i].split(",");
-                    var flag=0
-                    for(var j=0; j<realan.length; j++){
-                        if(ans[i]==realan[j]) flag=1;
-                    }
-                    if(flag==1){
+                    
+                    if(engwords[i]==ans[i]){
                         num++; score.push("o");
                     }
                     else{
                         score.push("x");
                     }
             }
+        
             var s="";
             if (num>=engwords.length*9/10){
                 s="     congratulations!";
