@@ -1,10 +1,60 @@
 <!DOCTYPE html>
 <html>
-    <h1>suda english test</h1>
+    <meta charset="utf-8">
+    <style>
+        body{
+            margin:0;
+            color:white;
+            background-color: black;
+            text-align: center;
+        }
+        a {
+            color: blue;
+            text-decoration: none;    
+        }
+        
+        h1{
+            border-bottom:1px;
+            border-top:0px;
+            border-left:0px;
+            border-right: 0px;
+            border-color: red;
+            border-style: solid;
+            text-align: center;
+            background-color: black;
+            font-style: oblique;
+            margin:0;
+            color:white;
+        }
+        p{
+            border-bottom:1px;
+            border-top:0px;
+            border-left:0px;
+            border-right: 0px;
+            border-color: red;
+            border-style: solid;
+            text-align: center;
+            background-color:black;
+            margin:0;
+            color:white;
+        }
+
+        table, th, td{
+            border: 1px solid red;
+            border-collapse: collapse;
+            text-align: center;
+            background-color: black;
+            margin:0;
+            color: white;
+        }
+    </style>
+    <h1>SUDA english test</h1>
+    <p>
     <label for="quantity">from day</label>
     <input type="number" id="startday" name="quantity1" min="1" max="30">
     <label for="quantity">to day</label>
     <input type="number" id="lastday" name="quantity2" min="1" max="30">
+    </p>
     <p style="font-size:30px;" id="wordmaster"></h1>
     <button onclick="showwordmaster()">make_test</button>
     
@@ -123,7 +173,7 @@
         }
         function input(){
             var word=document.getElementById("input").value;
-            if(word=="열려라 참깨"){
+            if(word=="love is an open door"){
                 showans();
             }
             if(word=="닫혀라 참깨"){
@@ -144,8 +194,9 @@
                 "test is finished. click score button";
             }
         }
+        var num=0;
         function output(){
-            var num=0;
+            num=0
             var realan=[];
             for(var i=0; i<eng; i++){
                     realan=korwords[i].split(",");
@@ -208,6 +259,7 @@
                 document.getElementById("scorerealans"+sq).innerHTML
                 =korwords[sq];
                 document.getElementById("scoreresult"+sq).innerHTML=score[sq];
+                //<input type="button" onclick="correct0()">
             }
             else{
                 document.getElementById("scorenum"+sq).innerHTML= sq+1
@@ -237,25 +289,28 @@
                 "test is finished. click score button";
             }
         }
+        function correct0(){
+            document.getElementById("correctscore0").innerHTML=
+                "o";
+            
+        }
     </script>    
     <body>
         <p style="font-size:25px;", id="prob"></p>
-        
+        <p>
         <button onclick="input_()">back</button>
         <input type="text" id="input">
         <button onclick="input()">next</button>
-        <br>
+        </p>
         <p id="output"></p>
-        <br>
         <button onclick="output()">score</button>
-        <br>
-        <table id="showans" style="display:none">
+        <table id="showans" style="display:none; ">
             <tr>
-                <th>number:</th>
-                <th>problem:</th>
-                <th>student's answer:  </th>
-                <th>real answer:  </th>
-                <th>result:  </th>
+                <th>number</th>
+                <th>problem</th>
+                <th>student's answer  </th>
+                <th>real answer  </th>
+                <th>result  </th>
             </tr>
             <tr> <td id="scorenum0"></td><td id="scoreprob0"></td><td id="scoreyourans0"></td><td id="scorerealans0"></td><td id="scoreresult0"></td></tr>
             <tr> <td id="scorenum1"></td><td id="scoreprob1"></td><td id="scoreyourans1"></td><td id="scorerealans1"></td><td id="scoreresult1"></td></tr>
@@ -317,9 +372,6 @@
             <tr> <td id="scorenum57"></td><td id="scoreprob57"></td><td id="scoreyourans57"></td><td id="scorerealans57"></td><td id="scoreresult57"></td></tr>
             <tr> <td id="scorenum58"></td><td id="scoreprob58"></td><td id="scoreyourans58"></td><td id="scorerealans58"></td><td id="scoreresult58"></td></tr>
             <tr> <td id="scorenum59"></td><td id="scoreprob59"></td><td id="scoreyourans59"></td><td id="scorerealans59"></td><td id="scoreresult59"></td></tr>
-            ​
-           
-
         </table>
         </body>
 </html>
