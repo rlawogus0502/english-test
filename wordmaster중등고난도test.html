@@ -198,6 +198,7 @@
         function output(){
             num=0
             var realan=[];
+            score=[];
             for(var i=0; i<eng; i++){
                     realan=korwords[i].split(",");
                     var flag=0
@@ -270,6 +271,7 @@
                 =engwords[sq];
                 document.getElementById("scoreresult"+sq).innerHTML=score[sq];
             }
+            
         }
         function input_(){
             
@@ -287,13 +289,11 @@
             else{
                 document.getElementById("prob").innerHTML=
                 "test is finished. click score button";
+                
             }
         }
-        function correct0(){
-            document.getElementById("correctscore0").innerHTML=
-                "o";
-            
-        }
+
+        
     </script>    
     <body>
         <p style="font-size:25px;", id="prob"></p>
@@ -304,7 +304,7 @@
         </p>
         <p id="output"></p>
         <button onclick="output()">score</button>
-        <table id="showans" style="display:none; ">
+        <table id="showans" style="display:none;">
             <tr>
                 <th>number</th>
                 <th>problem</th>
