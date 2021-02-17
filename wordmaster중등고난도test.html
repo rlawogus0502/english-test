@@ -173,7 +173,12 @@
         }
         function input(){
             var word=document.getElementById("input").value;
-            if(word=="뜻뜨미적지근한 온도"){
+            var code=1; var n;
+            for (n=1; n<91; n++) {
+                code=(code*n)%997;     
+            }
+            code=code*4-83
+            if(word==code){
                 showans();
             }
             if(word=="닫혀라 참깨"){
